@@ -1,5 +1,6 @@
-# Grupo_2_Projeto_Integrador_TC
-# Nome do Site
+
+# Clínica Bella
+
 
 ## 1. O que é o projeto?
 
