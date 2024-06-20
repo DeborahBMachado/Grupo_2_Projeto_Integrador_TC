@@ -1,5 +1,5 @@
 
-# Clínica ForAll
+# Clínica ForAll - beleza e estética avançada
 
 
 ## 1. O que é o projeto?
