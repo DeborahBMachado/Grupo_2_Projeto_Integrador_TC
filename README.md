@@ -21,6 +21,9 @@ Clube de vantagens, visando fidelizar o cliente.
  
 Página 1: Apresentação da empresa, produtos/serviços/especialistas/endereço/contato
 (resumido com links para as páginas principais);
+
 Página 2: Produtos/serviços/pacotes de serviços;
-Página 3: Apresentação dos profissionais da empresa e suas referências; 
+
+Página 3: Apresentação dos profissionais da empresa e suas referências;
+
 Página 4: Apresentação do Clube de Vantagens com as regras para fidelização do cliente.
