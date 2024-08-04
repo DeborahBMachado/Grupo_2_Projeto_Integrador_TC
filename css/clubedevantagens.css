@@ -129,33 +129,16 @@
     margin-bottom: 2em;
 }
 
-.btn-primary {
-    background-color: #791555; /* Cor de fundo do botão */
-    border-color: #791555; /* Cor da borda do botão */
-    color: #fff; /* Cor do texto do botão */
-    padding: 0.75em 2em; /* Espaçamento interno do botão */
-    text-transform: uppercase; /* Transformar texto em maiúsculas */
-    border-radius: 10; /* bordas arredondadas */
-}
 
-.btn-primary:hover {
-    background-color: #ffffff; /* Cor de fundo do botão ao passar o mouse */
-    border-color: #791555; /* Cor da borda do botão ao passar o mouse */
-    color: #791555; /* Cor do texto do botão ao passar o mouse */
-}
 
 /* Efeito de Transição */
-#section-1 h2,
-#section-1 p,
-#section-1 .btn {
+#section-1 h2 {
     opacity: 0;
     transform: translateY(-20px);
     transition: all 0.5s ease-in-out;
 }
 
-#section-1.visible h2,
-#section-1.visible p,
-#section-1.visible .btn {
+#section-1.visible h2 {
     opacity: 1;
     transform: translateY(0);
 }

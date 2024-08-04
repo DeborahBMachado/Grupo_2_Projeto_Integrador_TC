@@ -103,7 +103,44 @@
 }
 
 /* CSS referente ao conteudo do formulario =================================================================================*/
+#section-1 {
+    margin-top: 7em;
+    background-color: #1B2530; /* Cor de fundo da sessão */
+    color: #1B2530; /* Cor do texto */
+}
 
+.headline {
+    font-size: 2.5em;
+    color: #fff;
+    margin-bottom: 0.5em;
+    font-weight: regular;
+}
+
+.highlight {
+    color: #BB9B37; /* Cor da palavra específica */
+    font-weight: bold; /* Deixar a palavra em negrito */
+    transition: color 0.3s ease; /* Transição suave para a cor */
+}
+
+.subheadline {
+    font-size: 1.3em;
+    color: #fff;
+    margin-bottom: 2em;
+}
+
+
+
+/* Efeito de Transição */
+#section-1 h1 {
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: all 0.5s ease-in-out;
+}
+
+#section-1.visible h1 {
+    opacity: 1;
+    transform: translateY(0);
+}
 
 
 
