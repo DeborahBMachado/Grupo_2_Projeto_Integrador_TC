@@ -132,7 +132,7 @@
 }
 
 .btn-primary:hover {
-    background-color: #ffffff; /* Cor de fundo do botão ao passar o mouse */
+    background-color: #ece8ea; /* Cor de fundo do botão ao passar o mouse */
     border-color: #791555; /* Cor da borda do botão ao passar o mouse */
     color: #791555; /* Cor do texto do botão ao passar o mouse */
 }
@@ -195,7 +195,7 @@
 }
 
 #club1 .btn:hover {
-    background-color: #ece8ea; /* Cor de fundo do botão ao passar o mouse */
+    background-color: #fff; /* Cor de fundo do botão ao passar o mouse */
     color: #BB9B37; /* Cor do texto ao passar o mouse */
     border-color: transparent; /* Cor da borda ao passar o mouse */
 }
