@@ -25,14 +25,6 @@ emailInput.addEventListener('focus', function(){
     emailLabel.classList.add('required-popup')
 })
 
-dataNascimentoInput.addEventListener('focus', function(){
-    dataNascimentoLabel.classList.add('required-popup')
-})
-
-genderSelect.addEventListener('focus', function(){
-    genderLabel.classList.add('required-popup')
-})
-
 foneInput.addEventListener('focus', function(){
     foneLabel.classList.add('required-popup')
 })
@@ -46,13 +38,6 @@ emailInput.addEventListener('blur', function(){
     emailLabel.classList.remove('required-popup')
 })
 
-dataNascimentoInput.addEventListener('blur', function(){
-    dataNascimentoLabel.classList.remove('required-popup')
-})
-
-genderSelect.addEventListener('blur', function(){
-    genderLabel.classList.remove('required-popup')
-})
 
 foneInput.addEventListener('blur', function(){
     foneLabel.classList.remove('required-popup')
@@ -61,7 +46,7 @@ foneInput.addEventListener('blur', function(){
 // Validar valor do input
 nomeInput.addEventListener('change', function(evento){
     let valor = evento.target.value;
-    console.log('Nome Completo:', valor)
+    console.log('*Nome Completo:', valor)
 
     if (!nomeParts.test(valor)) {
         nomeInput.classList.remove('correct');
@@ -77,7 +62,7 @@ nomeInput.addEventListener('change', function(evento){
 
 emailInput.addEventListener('change', function(evento){
     let valor = evento.target.value;
-    console.log('E-mail:', valor)
+    console.log('*E-mail:', valor)
 
     if (!emailPattern.test(valor)) {
     // Estilos dinâmicos caso o valor não seja válido
@@ -95,12 +80,12 @@ emailInput.addEventListener('change', function(evento){
 
 foneInput.addEventListener('change', function(evento){
     let valor = evento.target.value;
-    console.log('Telefone:', valor)
+    console.log('*Telefone:', valor)
 
     if (!fonePattern.test(valor)) {
         foneInput.classList.remove('correct');
         foneInput.classList.add('error');
-        foneHelper.innerText = "Número de telefone inválido. O formato correto é (00) 00000-0000.";
+        foneHelper.innerText = "Telefone inválido. O formato correto é (00) 00000-0000.";
         foneHelper.classList.add('visible');
     } else {
         foneInput.classList.remove('error');
@@ -108,7 +93,3 @@ foneInput.addEventListener('change', function(evento){
         foneInput.classList.add("correct");
     }
 })
-
-
-
-
