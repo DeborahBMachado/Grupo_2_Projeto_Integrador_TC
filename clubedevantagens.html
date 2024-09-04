@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
+<html lang="pt-br">
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -27,18 +27,22 @@
     />
     <!-- CSS do projeto -->
     <link rel="stylesheet" href="css/clubedevantagens.css" />
+    <link rel="stylesheet" href="css/styles.css" />
     <!-- JavaScript Bootstrap -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
-  </head>
-  <body>
+    <!-- jQuery e Plugin de Máscara -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+</head>
+<body>
 <!-- NAVBAR ============================================================================================================-->
     <nav class="navbar navbar-expand-lg fixed-top bg-primary-color" id="navbar">
       <div class="container py-3">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="index.html">
           <img src="src/imagens/Logo Pradão - forAll 2.png" alt="forAll" />
         </a>
         <button
@@ -55,19 +59,19 @@
         <div class="collapse navbar-collapse" id="navbar-items">
           <ul class="navbar-nav mx-auto">
             <li class="nav-item">
-              <a href="#" class="nav-link">Home</a>
+              <a href="index.html" class="nav-link">Home</a>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link">Serviços</a>
+              <a href="servicos.html" class="nav-link">Serviços</a>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link">Pacotes</a>
+              <a href="pacotesdeservicos.html" class="nav-link">Pacotes</a>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link active">Clube de Vantagens</a>
+              <a href="clubedevantagens.html" class="nav-link active">Clube de Vantagens</a>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link">Blog</a>
+              <a href="blog.html" class="nav-link">Blog</a>
             </li>
           </ul>
           <a href="#contact" class="btn btn-cta">Agende Agora</a>
@@ -84,22 +88,19 @@
       <p class="subheadline">Com a assinatura você terá ainda mais vantagens! Seja forAll Exclusive!</p>
   </div>
 </section>
-<!-- JavaScript for transitions -->
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-      document.querySelector('#section-1').classList.add('visible');
-  });
-</script>
 
 <!-- Sessão 2: Clube de Vantagens =========================================================================================-->
 <section id="club" class="d-flex align-items-center">
   <div class="container">
       <div class="row align-items-center">
           <div class="col-md-6">
-              <h3>Assine o plano anual e ganhe ainda  mais vantagens!<br><span class="highlight">Club de Vantagens</span></h3>
+              <h3>Assine o plano anual e ganhe ainda  mais vantagens!<br><span class="highlight">Clube de Vantagens</span></h3>
               <h3>Plano Anual:</h3>
               <p>Inclui três aplicações de botox com direito a retoque;<br> Atendimento em domicílio;<br> Presentes exclusivos;<br> Descontos especiais em tratamentos; <br> Consultas de avaliação gratuitas;<br> Acesso a eventos e workshops exclusivos;</p>
-              <a href="formularioclube.html" class="btn btn-primary">Assine agora</a>
+              <!-- Botão que abre o modal -->
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#subscriptionModal">
+                  ASSINE AGORA
+              </button>
           </div>
           <div class="col-md-6">
               <img src="src/imagens/forAll - Clube de Vantagens 1.webp" class="img-fluid rounded img-slide" alt="Clube de Vantagens">
@@ -108,44 +109,113 @@
   </div>
 </section>
 
-<!-- Sessão 3 banner 2 =============================================================================================-->
+<!-- Modal do Formulário -->
+<div class="modal fade" id="subscriptionModal" tabindex="-1" aria-labelledby="subscriptionModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="subscriptionModalLabel">Assine Agora</h5>
+              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <form id="subscriptionForm">
+                  <div class="mb-3">
+                      <label for="name" class="form-label">Nome Completo</label>
+                      <input type="text" class="form-control form-control-lg" id="name" placeholder="Seu Nome Completo" required pattern="^[a-zA-ZÀ-ÿ]+ [a-zA-ZÀ-ÿ]+( [a-zA-ZÀ-ÿ]+)*$" title="Digite pelo menos o nome e o sobrenome">
+                  </div>
+                  <div class="mb-3">
+                      <label for="email" class="form-label">E-mail</label>
+                      <input type="email" class="form-control form-control-lg" id="email" placeholder="seuemail@exemplo.com" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Digite um e-mail válido">
+                  </div>
+                  <div class="mb-3">
+                      <label for="phone" class="form-label">Telefone</label>
+                      <input type="tel" class="form-control form-control-lg" id="phone" placeholder="(11) 99874-3210" required>
+                  </div>
+                  <div class="mb-3 form-check">
+                      <input type="checkbox" class="form-check-input" id="activateCoupon">
+                      <label class="form-check-label" for="activateCoupon">Ativar cupom de 50% OFF</label>
+                  </div>
+                  <div id="couponDetails" class="mb-3" style="display: none;">
+                      <ul class="list-unstyled">
+                          <li>Aplicação de botox</li>
+                          <li>Atendimento em domicílio</li>
+                          <li>Descontos especiais em tratamentos</li>
+                          <li>Consultas de avaliação gratuitas</li>
+                      </ul>
+                  </div>
+                  <button type="submit" class="btn btn-gold w-100">Enviar</button>
+              </form>
+          </div>
+      </div>
+  </div>
+</div>
 
+<!-- Mensagem de Confirmação -->
+<div class="modal fade" id="confirmationModal" tabindex="-1" aria-labelledby="confirmationModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="confirmationModalLabel">Confirmação</h5>
+              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body text-center">
+              <p>Obrigado por se inscrever! Em breve entraremos em contato.</p>
+          </div>
+      </div>
+  </div>
+</div>
+
+
+<!-- Mensagem de Confirmação -->
+<div class="modal fade" id="confirmationModal" tabindex="-1" aria-labelledby="confirmationModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content bg-black text-white border-0">
+          <div class="modal-header border-0">
+              <h5 class="modal-title" id="confirmationModalLabel">Confirmação</h5>
+              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body text-center">
+              <p>Obrigado por se inscrever! Em breve entraremos em contato.</p>
+          </div>
+      </div>
+  </div>
+</div>
+
+
+<!-- Mensagem de Confirmação -->
+<div class="modal fade" id="confirmationModal" tabindex="-1" aria-labelledby="confirmationModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="confirmationModalLabel">Confirmação</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Obrigado por se inscrever! Em breve entraremos em contato.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Sessão 3 banner 2 =============================================================================================-->
 <section id="banner-2" class="text-center py-5">
   <div class="container">
-      <!-- Headline e Subtítulo -->
       <h2 class="headline">Clube de Vantagens - forAll Exclusive</h2>
-     <!-- Banner2 -->
       <div class="Banner2">
           <img src="src/imagens/forAll - Clube de Vantagens 2.webp"class="img-fluid rounded img-slide" alt="Clube de Vantagens">
       </div>
   </div>
 </section>
-<!-- JavaScript for transitions -->
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-      document.querySelector('#banner-2').classList.add('visible');
-  });
-</script>
 
 <!-- Sessão 4 banner 3 =============================================================================================-->
-
 <section id="banner-3" class="text-center py-5">
   <div class="container">
-      <!-- Headline e Subtítulo -->
       <h2 class="headline">Clube de Vantagens - forAll Exclusive</h2>
-     <!-- Banner2 -->
       <div class="Banner3">
           <img src="src/imagens/forAll - Clube de Vantagens 3.webp"class="img-fluid rounded img-slide" alt="Clube de Vantagens">
       </div>
   </div>
 </section>
-<!-- JavaScript for transitions -->
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-      document.querySelector('#banner-2').classList.add('visible');
-  });
-</script>
-
 
 <!-- FOOTER ===============================================================================================================-->
     <footer class="container-fluid bg-dark-color" id="footer">
@@ -201,5 +271,37 @@
         </div>
       </div>
     </footer>
+
+    <script>
+      $(document).ready(function(){
+          // Aplicar máscara de telefone
+          $('#phone').mask('(00) 00000-0000');
+      });
+  
+      document.getElementById('activateCoupon').addEventListener('change', function() {
+          var couponDetails = document.getElementById('couponDetails');
+          couponDetails.style.display = this.checked ? 'block' : 'none';
+      });
+  
+      document.getElementById('subscriptionForm').addEventListener('submit', function(event) {
+          event.preventDefault(); // Previne o envio padrão do formulário
+          
+          // Validação do formulário (já incluída no HTML com required e pattern)
+          if (this.checkValidity()) {
+              // Mostrar mensagem de confirmação
+              var confirmationModal = new bootstrap.Modal(document.getElementById('confirmationModal'));
+              confirmationModal.show();
+              
+              // Fechar o modal de inscrição
+              var subscriptionModal = bootstrap.Modal.getInstance(document.getElementById('subscriptionModal'));
+              subscriptionModal.hide();
+  
+              // Resetar o formulário
+              this.reset();
+              document.getElementById('couponDetails').style.display = 'none';
+          }
+      });
+  </script>
+  
   </body>
 </html>

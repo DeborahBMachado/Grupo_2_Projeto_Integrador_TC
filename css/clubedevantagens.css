@@ -1,179 +1,40 @@
-* {
-    font-family: 'Lato', sans-serif;
-}
-
-.bg-primary-color {
-    background-color: #fff;
-}
-
-.bg-secondary-color {
-    background-color: #ece8ea;
-}
-
-.ba-dark-color {
-    background-color: #1B2530;
-}
-
-.primary-color {
-    color: #050505;
-}
-
-.secondary-color {
-    color: #7a7a7a;
-}
-/* NAVBAR ===============================================================================*/
-#navbar {
-    border-bottom: 1px solid #7a7a7a;
-}
-
-#navbar a {
-    color: #050505;
-}
-
-#navbar a:hover {
-    color: #791555;
-}
-
-#navbar .active {
-    border-bottom: 1px solid #791555;
-    color: #791555;
-}
-
-.navbar-brand {
-    display: flex;
-}
-
-.navbar-brand img {
-    width: 140px;
-}
-
-#navbar-items .navbar-nav {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-}
-
-#navbar-items .nav-item {
-    margin: 0 1em;
-}
-
-/* Estilo do botão "Agende Agora" na navbar */
-#navbar .btn-cta {
-    background-color: #791555; /* Cor de fundo do botão */
-    color: #fff; /* Cor do texto do botão */
-    border: 2px solid transparent; /* Borda padrão transparente */
-    padding: 0.50em 2em; /* Espaçamento interno do botão */
-    text-transform: uppercase; /* Transformar texto em maiúsculas */
-    border-radius: 10px; /* Bordas arredondadas */
-    transition: background-color 0.6s cubic-bezier(0.4, 0, 0.2, 1), color 0.6s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.6s cubic-bezier(0.4, 0, 0.2, 1); /* Transição mais suave */
-
-}
-
-#navbar .btn-cta:hover {
-    background-color: #ffffff; /* Cor de fundo do botão ao passar o mouse */
-    color: #791555; /* Cor do texto ao passar o mouse */
-    border-color: #791555; /* Cor da borda ao passar o mouse (mesma cor do texto) */
-}
-
-@media (max-width: 991.98px) {
-    #navbar-items {
-        flex-direction: column;
-        align-items: flex-start; /* Alinha itens do menu à esquerda */
-    }
-
-    #navbar-items .navbar-nav {
-        flex-direction: column;
-        align-items: flex-start; /* Alinha itens do menu à esquerda */
-        margin-bottom: 1em;
-        width: 100%; /* Garante que a largura dos itens do menu ocupe 100% do container */
-    }
-
-    #navbar-items .nav-item {
-        margin: 0.5em 0; /* Ajusta o espaçamento para o menu em tela pequena */
-    }
-
-    .navbar-brand {
-        margin-bottom: 1em; /* Espaçamento entre o logo e o menu em telas pequenas */
-    }
-
-    .btn-cta {
-        margin-top: 1em; /* Espaçamento acima do botão em telas pequenas */
-        align-self: flex-start; /* Alinha o botão à esquerda */
-    }
-}
-
-/* CSS referente ao conteudo individual =================================================================================*/
 /* SESSÃO 1 anuncio ==================================================================================*/
 #section-1 {
     margin-top: 7em;
-    background-color: #ece8ea; /* Cor de fundo da sessão */
-    color: #1B2530; /* Cor do texto */
+    background-color: #fff; /* Cor de fundo preto */
+    color: #BB9B37; /* Cor do texto dourado */
+    padding: 5em 0;
 }
 
 .headline {
     font-size: 2.5em;
-    color: #1B2530;
+    color: #BB9B37; /* Cor dourada */
     margin-bottom: 0.5em;
-    font-weight: regular;
-}
-
-.highlight {
-    color: #BB9B37; /* Cor da palavra específica */
-    font-weight: bold; /* Deixar a palavra em negrito */
-    transition: color 0.3s ease; /* Transição suave para a cor */
+    font-weight: bold;
 }
 
 .subheadline {
     font-size: 1.3em;
-    color: #7a7a7a;
+    color: #fff; /* Texto secundário em branco */
     margin-bottom: 2em;
 }
 
-
-
-/* Efeito de Transição */
-#section-1 h2 {
-    opacity: 0;
-    transform: translateY(-20px);
-    transition: all 0.5s ease-in-out;
-}
-
-#section-1.visible h2 {
-    opacity: 1;
-    transform: translateY(0);
-}
 /* SESSÃO 2 Clube de vantagens ==================================================================================*/
 #club {
     padding: 6em 0;
-    background-color: #1B2530; /* Cor de fundo padrão */
+    background-color: #1B2530; /* Cor de fundo preto */
     color: #fff;
     text-align: left;
     position: relative;
     overflow: hidden; /* Garante que a animação da imagem não saia do contêiner */
 }
 
-/* Container dentro da sessão */
-#club .container {
-    position: relative;
-    z-index: 2;
-}
-
-/* Destaque */
-.highlight {
-    color: #BB9B37; /* Cor da palavra específica */
-    font-weight: bold; /* Deixar a palavra em negrito */
-    transition: color 0.3s ease; /* Transição suave para a cor */
-}
-
 /* Título */
 #club h3 {
     font-size: 2.5em;
     margin-bottom: 1em;
-    color: #fff; /* Cor do título */
-    font-weight: bold; /* Negrito */
-    opacity: 0; /* Começa invisível */
-    transform: translateY(-20px); /* Começa deslocado para cima */
-    transition: opacity 0.6s ease, transform 0.6s ease; /* Transições suaves para opacidade e deslocamento */
+    color: #BB9B37; /* Cor dourada */
+    font-weight: bold;
 }
 
 /* Parágrafo */
@@ -182,196 +43,131 @@
     line-height: 1.8;
     margin-bottom: 1em;
     color: #ffffff; /* Cor do texto */
-    opacity: 0; /* Começa invisível */
-    transform: translateY(20px); /* Começa deslocado para baixo */
-    transition: opacity 0.6s ease, transform 0.6s ease; /* Transições suaves para opacidade e deslocamento */
 }
 
 /* Botão */
 #club .btn {
     border-color: transparent;
-    color: #fff; /* Cor do texto do botão */
-    background-color: #BB9B37; /* Cor de fundo do botão */
+    color: #fff;
+    background-color: #BB9B37; /* Cor dourada */
     transition: all 0.3s ease;
     border-radius: 10px;
     margin-bottom: 2em;
-    font-weight: bold; /* Negrito */
-    padding: 0.75em 2em; /* Dimensões do botão */
+    font-weight: bold;
+    padding: 0.75em 2em;
     font-size: 1em;
 }
 
 #club .btn:hover {
-    background-color: #ece8ea; /* Cor de fundo do botão ao passar o mouse */
-    color: #BB9B37; /* Cor do texto ao passar o mouse */
-    border-color: transparent; /* Cor da borda ao passar o mouse */
+    background-color: #000; /* Fundo preto ao passar o mouse */
+    color: #BB9B37; /* Cor dourada ao passar o mouse */
+    border-color: transparent;
 }
 
 /* Imagem */
 #club img {
     max-width: 100%;
     border-radius: 10px;
-    opacity: 0; /* Começa invisível */
-    transform: translateX(-20px); /* Desloca a imagem para a esquerda */
-    transition: opacity 0.6s ease, transform 0.6s ease; /* Transições suaves para opacidade e deslocamento */
 }
-
-/* Animação de fade-in e slide-in */
-@keyframes fade-in-up {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes slide-in {
-    from {
-        opacity: 0;
-        transform: translateX(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-/* Aplica a animação ao carregar a página */
-#club h3, #club p {
-    animation: fade-in-up 0.6s ease-out forwards; /* Define a animação com 'forwards' para manter o estado final */
-}
-
-#club img {
-    animation: slide-in 0.6s ease-out forwards; /* Define a animação com 'forwards' para manter o estado final */
-}
-
-/* Ajustes para dispositivos móveis */
-@media (max-width: 767px) {
-    #club .container {
-        flex-direction: column;
-        align-items: center; /* Alinha os itens ao centro em telas pequenas */
-    }
-}
-
-/* SESSÃO 3 banner 2 ==================================================================================*/
-
-#banner-2 {
-    background-color: #ece8ea; 
-    color: #1B2530;
-    padding: 3em 0;
-}
-
-/* Estilo do título principal */
-.headline {
-    font-size: 2.5em;
-    color: #1B2530;
-    margin-bottom: 0.5em;
-    font-weight: bold;
-}
-
-#Banner2 img {
-    max-width: 100%;
+/* Estilização do Modal do Formulário */
+.modal-content {
+    background-color: #fff; /* Fundo branco */
+    color: #000; /* Texto preto */
     border-radius: 10px;
-    opacity: 0; /* Começa invisível */
-    transform: translateX(-20px); /* Desloca a imagem para a esquerda */
-    transition: opacity 0.6s ease, transform 0.6s ease; /* Transições suaves para opacidade e deslocamento */
 }
 
-#Banner2 img {
-    animation: slide-in 0.6s ease-out forwards; /* Define a animação com 'forwards' para manter o estado final */
+.modal-header {
+    background-color: #BB9B37; /* Fundo dourado */
+    color: #fff; /* Texto branco */
+    border-radius: 10px 10px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-/* Ajustes para dispositivos móveis */
-@media (max-width: 767px) {
-    #club .container {
-        flex-direction: column;
-        align-items: center; /* Alinha os itens ao centro em telas pequenas */
-    }
+.modal-title {
+    font-size: 1.8em;
+    font-weight: 600;
 }
 
-/* SESSÃO 4 banner 4 ==================================================================================*/
-
-#banner-3 {
-    background-color: #ffffff; 
-    color: #1B2530;
-    padding: 3em 0;
+.btn-close-white {
+    filter: invert(1);
 }
 
-/* Estilo do título principal */
-.headline {
-    font-size: 2.5em;
-    color: #1B2530;
+.modal-body {
+    padding-top: 10px;
+}
+
+.form-label {
+    color: #000; /* Cor preta para os rótulos */
+    font-weight: 500;
     margin-bottom: 0.5em;
-    font-weight: bold;
 }
 
-#Banner3 img {
-    max-width: 100%;
-    border-radius: 10px;
-    opacity: 0; /* Começa invisível */
-    transform: translateX(-20px); /* Desloca a imagem para a esquerda */
-    transition: opacity 0.6s ease, transform 0.6s ease; /* Transições suaves para opacidade e deslocamento */
+.form-control {
+    background-color: #f9f9f9; /* Fundo claro */
+    color: #000; /* Texto preto */
+    border: 1px solid #BB9B37; /* Borda dourada */
+    border-radius: 5px;
+    padding: 0.75em 1em;
+    font-size: 1em;
 }
 
-#Banner3 img {
-    animation: slide-in 0.6s ease-out forwards; /* Define a animação com 'forwards' para manter o estado final */
+.form-control::placeholder {
+    color: #999;
 }
 
-/* Ajustes para dispositivos móveis */
-@media (max-width: 767px) {
-    #club .container {
-        flex-direction: column;
-        align-items: center; /* Alinha os itens ao centro em telas pequenas */
+.form-control:focus {
+    background-color: #fff; /* Fundo branco ao focar */
+    border-color: #BB9B37; /* Borda dourada ao focar */
+    box-shadow: none;
+}
+
+.form-check-label {
+    color: #000; /* Cor preta */
+}
+
+#couponDetails {
+    background-color: #f9f9f9;
+    padding: 1em;
+    border-radius: 5px;
+}
+
+#couponDetails ul li {
+    margin-bottom: 0.5em;
+    list-style-type: disc;
+    margin-left: 1.5em;
+}
+
+.btn-gold {
+    background-color: #BB9B37; /* Fundo dourado */
+    color: #fff; /* Texto branco */
+    border: none;
+    padding: 0.75em;
+    font-size: 1.2em;
+    font-weight: 600;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-gold:hover {
+    background-color: #fff; /* Fundo branco no hover */
+    color: #BB9B37; /* Texto dourado no hover */
+    border: 1px solid #BB9B37;
+}
+
+/* Responsividade */
+@media (max-width: 576px) {
+    .modal-content {
+        padding: 15px;
     }
-}
 
+    .modal-title {
+        font-size: 1.5em;
+    }
 
-
-
-/* FOOTER ================================================================================================================ */
-#footer {
-    background-color: #ece8ea; /* Cor de fundo do footer */
-    color: #1B2530; /* Cor do texto no footer */
-    padding: 2em 0; /* Espaçamento interno do footer */
-    border: none; /* Remove bordas do footer */
-}
-
-#footer h4 {
-    color: #1B2530; /* Cor dos títulos no footer */
-    margin-bottom: 1em; /* Espaçamento abaixo dos títulos */
-}
-
-#footer .secondary-color {
-    color: #1B2530; /* Cor secundária no footer */
-}
-
-#footer .btn-dark {
-    background-color: #791555; /* Cor de fundo do botão */
-    color: #fff; /* Cor do texto do botão */
-    border: none; /* Remove a borda do botão */
-    padding: 0.75em 2em; /* Dimensões do botão */
-    font-size: 1em; /* Tamanho da fonte do botão */
-    border-radius: 10px; /* Arredonda os cantos do botão */
-    transition: all 0.3s ease; /* Transições suaves para cor de fundo e do texto */
-}
-
-#footer .btn-dark:hover {
-    background-color: #fff; /* Cor de fundo do botão ao passar o mouse */
-    color: #791555; /* Cor do texto ao passar o mouse */
-    border: 1px solid #791555; /* Borda do botão ao passar o mouse */
-}
-
-#footer #footer-details {
-    margin-bottom: 2em; /* Espaço abaixo do conteúdo principal do footer */
-}
-
-#footer #footer-bottom {
-    border: none; /* Remove qualquer borda no rodapé inferior */
-    padding-top: 1em; /* Espaço acima do rodapé inferior */
-}
-
-#footer #footer-bottom p {
-    margin: 0; /* Remove a margem do parágrafo no rodapé inferior */
+    .btn-gold {
+        font-size: 1em;
+        padding: 0.6em;
+    }
 }

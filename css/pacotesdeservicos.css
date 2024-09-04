@@ -1,266 +1,142 @@
-* {
-    font-family: 'Lato', sans-serif;
-}
-
-.bg-primary-color {
+/* Estilo para as seções dos pacotes com botões dourados */
+.bg-white {
     background-color: #fff;
 }
 
-.bg-secondary-color {
-    background-color: #ece8ea;
-}
-
-.ba-dark-color {
-    background-color: #1B2530;
-}
-
-.primary-color {
-    color: #050505;
-}
-
-.secondary-color {
-    color: #7a7a7a;
-}
-/* NAVBAR ===============================================================================*/
-#navbar {
-    border-bottom: 1px solid #7a7a7a;
-}
-
-#navbar a {
-    color: #050505;
-}
-
-#navbar a:hover {
-    color: #791555;
-}
-
-#navbar .active {
-    border-bottom: 1px solid #791555;
-    color: #791555;
-}
-
-.navbar-brand {
-    display: flex;
-}
-
-.navbar-brand img {
-    width: 140px;
-}
-
-#navbar-items .navbar-nav {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-}
-
-#navbar-items .nav-item {
-    margin: 0 1em;
-}
-
-/* Estilo do botão "Agende Agora" na navbar */
-#navbar .btn-cta {
-    background-color: #791555; /* Cor de fundo do botão */
-    color: #fff; /* Cor do texto do botão */
-    border: 2px solid transparent; /* Borda padrão transparente */
-    padding: 0.50em 2em; /* Espaçamento interno do botão */
-    text-transform: uppercase; /* Transformar texto em maiúsculas */
-    border-radius: 10px; /* Bordas arredondadas */
-    transition: background-color 0.6s cubic-bezier(0.4, 0, 0.2, 1), color 0.6s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.6s cubic-bezier(0.4, 0, 0.2, 1); /* Transição mais suave */
-
-}
-
-#navbar .btn-cta:hover {
-    background-color: #ffffff; /* Cor de fundo do botão ao passar o mouse */
-    color: #791555; /* Cor do texto ao passar o mouse */
-    border-color: #791555; /* Cor da borda ao passar o mouse (mesma cor do texto) */
-}
-
-@media (max-width: 991.98px) {
-    #navbar-items {
-        flex-direction: column;
-        align-items: flex-start; /* Alinha itens do menu à esquerda */
-    }
-
-    #navbar-items .navbar-nav {
-        flex-direction: column;
-        align-items: flex-start; /* Alinha itens do menu à esquerda */
-        margin-bottom: 1em;
-        width: 100%; /* Garante que a largura dos itens do menu ocupe 100% do container */
-    }
-
-    #navbar-items .nav-item {
-        margin: 0.5em 0; /* Ajusta o espaçamento para o menu em tela pequena */
-    }
-
-    .navbar-brand {
-        margin-bottom: 1em; /* Espaçamento entre o logo e o menu em telas pequenas */
-    }
-
-    .btn-cta {
-        margin-top: 1em; /* Espaçamento acima do botão em telas pequenas */
-        align-self: flex-start; /* Alinha o botão à esquerda */
-    }
-}
-
-/* CSS referente ao conteudo individual =================================================================================*/
+/* Ajuste de margem superior para a primeira seção, para que não desapareça sob a header */
 #ps-section-2 {
-    background-color: #ece8ea; /* Cor de fundo da sessão */
-    color: #1B2530; /* Cor do texto */
-    margin-top: 90px; /* Ajuste conforme a altura real da navbar */
+    margin-top: 8rem; /* Aumenta a margem superior */
+    background-color: #fff;
+    text-align: center;
 }
 
-.headline {
-    font-size: 2.5em;
-    color: #1B2530;
-    margin-bottom: 0.5em;
-    font-weight: regular;
+/* Espaçamento superior e inferior das seções (diminuído) */
+section {
+    padding-top: 3rem; /* Diminuído para reduzir o espaço entre as seções */
+    padding-bottom: 3rem; /* Diminuído para reduzir o espaço entre as seções */
 }
 
-.subheadline {
-    font-size: 1.3em;
-    color: #7a7a7a;
-    margin-bottom: 2em;
+/* Estilo para o botão Assinar Pacote */
+.btn-primary-custom {
+    background-color: #BB9B37; /* Cor de fundo dourada */
+    border-color: #BB9B37; /* Borda dourada */
+    color: #fff; /* Cor do texto branca */
+    padding: 0.75em 2em; /* Espaçamento interno */
+    text-transform: uppercase; /* Texto em maiúsculas */
+    border-radius: 10px; /* Bordas arredondadas */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transição suave */
 }
 
-.btn-primary {
-    background-color: #791555; /* Cor de fundo do botão */
-    border-color: #791555; /* Cor da borda do botão */
-    color: #fff; /* Cor do texto do botão */
-    padding: 0.75em 2em; /* Espaçamento interno do botão */
-    text-transform: uppercase; /* Transformar texto em maiúsculas */
-    border-radius: 10; /* bordas arredondadas */
+.btn-primary-custom:hover {
+    background-color: #fff; /* Inverte as cores no hover */
+    color: #BB9B37; /* Cor do texto dourada */
+    border-color: #BB9B37; /* Borda dourada */
 }
 
-.btn-primary:hover {
-    background-color: #ffffff; /* Cor de fundo do botão ao passar o mouse */
-    border-color: #791555; /* Cor da borda do botão ao passar o mouse */
-    color: #791555; /* Cor do texto do botão ao passar o mouse */
+/* Estilo para os marcadores (bullet points) */
+.bullet-point {
+    color: #BB9B37; /* Cor dourada para o marcador */
+    font-weight: bold;
+    margin-right: 0.5em;
 }
 
-#club {
-    padding: 6em 0;
-    background-color: #1B2530; /* Cor de fundo padrão */
-    color: #fff;
-    text-align: left;
-    position: relative;
-    overflow: hidden; /* Garante que a animação da imagem não saia do contêiner */
-}
-
-/* Container dentro da sessão */
-#club .container {
-    position: relative;
-    z-index: 2;
-}
-
-/* Destaque */
+/* Destaque para os títulos dos pacotes */
 .highlight {
-    color: #BB9B37; /* Cor da palavra específica */
-    font-weight: bold; /* Deixar a palavra em negrito */
-    transition: color 0.3s ease; /* Transição suave para a cor */
+    color: #BB9B37;
+    font-weight: bold;
 }
 
-/* Título */
-#club h3 {
-    font-size: 2.5em;
-    margin-bottom: 1em;
-    color: #fff; /* Cor do título */
-    font-weight: bold; /* Negrito */
-    opacity: 0; /* Começa invisível */
-    transform: translateY(-20px); /* Começa deslocado para cima */
-    transition: opacity 0.6s ease, transform 0.6s ease; /* Transições suaves para opacidade e deslocamento */
+/* Estilo para a seção "Personalize Seu Pacote" com fundo diferente */
+#personalize-section {
+    background-color: #ece8ea; /* Tom diferente para destacar a seção */
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    text-align: center;
 }
 
-/* Parágrafo */
-#club p {
-    font-size: 1.2em;
-    line-height: 1.8;
-    margin-bottom: 1.5em;
-    color: #ffffff; /* Cor do texto */
-    opacity: 0; /* Começa invisível */
-    transform: translateY(20px); /* Começa deslocado para baixo */
-    transition: opacity 0.6s ease, transform 0.6s ease; /* Transições suaves para opacidade e deslocamento */
+/* Estilo para o formulário no modal */
+.modal-header {
+    background-color: #BB9B37; /* Fundo dourado */
+    color: #fff; /* Cor do texto branco */
+    border-bottom: none; /* Remove a borda inferior do header, se houver */
 }
 
-/* Botão */
-#pacote1 .btn {
-    border-color: transparent;
-    color: #fff; /* Cor do texto do botão */
-    background-color: #BB9B37; /* Cor de fundo do botão */
-    transition: all 0.3s ease;
+.modal-header .modal-title {
+    font-size: 1.5em; /* Tamanho do título */
+    font-weight: bold;
+    margin: 0; /* Remove margens extras */
+}
+
+.modal-header .btn-close {
+    color: #fff; /* Cor do ícone de fechar */
+    opacity: 1; /* Ícone de fechar visível */
+}
+
+.modal-header .btn-close:hover {
+    color: #BB9B37; /* Ícone ao passar o mouse */
+    background-color: #fff; /* Fundo ao passar o mouse */
+    border-radius: 50%; /* Ícone arredondado */
+}
+
+.modal-content {
+    background-color: #fff; /* Fundo branco */
+    color: #000; /* Texto preto */
     border-radius: 10px;
-    margin-bottom: 2em;
-    font-weight: bold; /* Negrito */
-    padding: 0.75em 2em; /* Dimensões do botão */
+}
+
+.form-label {
+    color: #000; /* Cor preta */
+    font-weight: 500;
+    margin-bottom: 0.5em;
+}
+
+.form-control {
+    background-color: #f9f9f9; /* Fundo claro */
+    color: #000; /* Texto preto */
+    border: 1px solid #BB9B37; /* Borda dourada */
+    border-radius: 5px;
+    padding: 0.75em 1em;
     font-size: 1em;
 }
 
-#club .btn:hover {
-    background-color: #ece8ea; /* Cor de fundo do botão ao passar o mouse */
-    color: #BB9B37; /* Cor do texto ao passar o mouse */
-    border-color: transparent; /* Cor da borda ao passar o mouse */
+.form-control::placeholder {
+    color: #999;
 }
 
-/* Imagem */
-#club img {
-    max-width: 100%;
+.form-control:focus {
+    background-color: #fff; /* Fundo ao focar */
+    border-color: #BB9B37; /* Borda dourada */
+    box-shadow: none;
+}
+
+.btn-primary-custom {
+    background-color: #BB9B37; /* Fundo dourado */
+    border-color: #BB9B37; /* Borda dourada */
+    color: #fff; /* Texto branco */
+    padding: 0.75em 2em;
+    text-transform: uppercase;
     border-radius: 10px;
-    opacity: 0; /* Começa invisível */
-    transform: translateX(-20px); /* Desloca a imagem para a esquerda */
-    transition: opacity 0.6s ease, transform 0.6s ease; /* Transições suaves para opacidade e deslocamento */
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-
-
-
-
-
-
-
-
-
-
-/* FOOTER ================================================================================================================ */
-#footer {
-    background-color: #ece8ea; /* Cor de fundo do footer */
-    color: #1B2530; /* Cor do texto no footer */
-    padding: 2em 0; /* Espaçamento interno do footer */
-    border: none; /* Remove bordas do footer */
+.btn-primary-custom:hover {
+    background-color: #fff; /* Fundo branco no hover */
+    color: #BB9B37; /* Texto dourado no hover */
+    border-color: #BB9B37; /* Borda dourada */
 }
 
-#footer h4 {
-    color: #1B2530; /* Cor dos títulos no footer */
-    margin-bottom: 1em; /* Espaçamento abaixo dos títulos */
-}
+/* Responsividade */
+@media (max-width: 576px) {
+    .modal-content {
+        padding: 15px;
+    }
 
-#footer .secondary-color {
-    color: #1B2530; /* Cor secundária no footer */
-}
+    .modal-title {
+        font-size: 1.5em;
+    }
 
-#footer .btn-dark {
-    background-color: #791555; /* Cor de fundo do botão */
-    color: #fff; /* Cor do texto do botão */
-    border: none; /* Remove a borda do botão */
-    padding: 0.75em 2em; /* Dimensões do botão */
-    font-size: 1em; /* Tamanho da fonte do botão */
-    border-radius: 10px; /* Arredonda os cantos do botão */
-    transition: all 0.3s ease; /* Transições suaves para cor de fundo e do texto */
-}
-
-#footer .btn-dark:hover {
-    background-color: #fff; /* Cor de fundo do botão ao passar o mouse */
-    color: #791555; /* Cor do texto ao passar o mouse */
-    border: 1px solid #791555; /* Borda do botão ao passar o mouse */
-}
-
-#footer #footer-details {
-    margin-bottom: 2em; /* Espaço abaixo do conteúdo principal do footer */
-}
-
-#footer #footer-bottom {
-    border: none; /* Remove qualquer borda no rodapé inferior */
-    padding-top: 1em; /* Espaço acima do rodapé inferior */
-}
-
-#footer #footer-bottom p {
-    margin: 0; /* Remove a margem do parágrafo no rodapé inferior */
+    .btn-primary-custom {
+        font-size: 1em;
+        padding: 0.6em;
+    }
 }
