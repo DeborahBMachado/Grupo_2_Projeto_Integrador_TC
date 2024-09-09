@@ -12,7 +12,7 @@
 
 /* Espaçamento superior e inferior das seções (diminuído) */
 section {
-    padding-top: 3rem; /* Diminuído para reduzir o espaço entre as seções */
+    padding-top: 2rem; /* Diminuído para reduzir o espaço entre as seções */
     padding-bottom: 3rem; /* Diminuído para reduzir o espaço entre as seções */
 }
 
@@ -25,6 +25,7 @@ section {
     text-transform: uppercase; /* Texto em maiúsculas */
     border-radius: 10px; /* Bordas arredondadas */
     transition: background-color 0.3s ease, color 0.3s ease; /* Transição suave */
+    margin-top: 20px;
 }
 
 .btn-primary-custom:hover {
@@ -44,6 +45,37 @@ section {
 .highlight {
     color: #BB9B37;
     font-weight: bold;
+}
+
+/* Ajuste de espaçamento entre imagem e texto */
+.col-md-6 {
+    margin-bottom: 1rem; /* Aumenta a margem inferior entre as colunas em dispositivos pequenos */
+}
+
+.img-fluid {
+    margin-bottom: 1rem; /* Adiciona espaçamento abaixo das imagens */
+}
+
+.text-content {
+    margin-top: 1.5rem; /* Adiciona espaçamento acima do texto */
+    padding-left: 2rem; /* Espaçamento esquerdo */
+    padding-right: 2rem; /* Espaçamento direito */
+}
+
+p {
+    line-height: 1.8; /* Aumenta o espaçamento entre linhas no parágrafo para maior legibilidade */
+}
+
+/* Fade-in para imagens */
+.img-fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.img-fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* Estilo para a seção "Personalize Seu Pacote" com fundo diferente */
@@ -138,5 +170,10 @@ section {
     .btn-primary-custom {
         font-size: 1em;
         padding: 0.6em;
+    }
+
+    .text-content {
+        padding-left: 1rem; /* Reduz o espaçamento em dispositivos móveis */
+        padding-right: 1rem; /* Reduz o espaçamento em dispositivos móveis */
     }
 }

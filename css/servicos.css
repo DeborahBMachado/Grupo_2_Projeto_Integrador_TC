@@ -134,6 +134,17 @@
 #team .carousel-control-next-icon:hover {
     background-color: #791555; /* Cor alternativa ao passar o mouse */
 }
+/* Animação de fade-in */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
 
 
   /* Ajustes para responsividade */

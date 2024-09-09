@@ -84,18 +84,18 @@
       </div>
     </section>
 
-<!-- SESSÃO 2: Pacote Rejuvenescimento Facil -->
+<!-- SESSÃO 2: Pacote Rejuvenescimento Facial -->
 <section id="club1" class="d-flex align-items-center bg-white py-5">
   <div class="container">
-    <div class="row align-items-center flex-row-reverse">
+    <div class="row align-items-center">
       <div class="col-md-6">
-        <img src="src/imagens/forAll - Pacote Rejuvenescimento Facial.webp" class="img-fluid rounded img-slide" alt="Pacote Rejuvenescimento Facial">
+        <img src="src/imagens/forAll - Pacote Rejuvenescimento Facial.webp" class="img-fluid rounded img-slide img-fade-in" alt="Pacote Rejuvenescimento Facial">
       </div>
       <div class="col-md-6">
-        <h3><span class="highlight">Pacote Rejuvenescimento Facil:</span></h3>
-        <p><span class="bullet-point">•</span> 3 Sessões de Botox<br>
-          <span class="bullet-point">•</span> 2 Sessões de Preenchimento com ácido hialurônico<br>
-          <span class="bullet-point">•</span> 3 Sessões de Microagulhamento</p>
+        <h3><span class="highlight">Pacote Rejuvenescimento Facial:</span></h3>
+        <p><span class="bullet-point">•</span> 2 Sessões de Botox<br>
+          <span class="bullet-point">•</span> 2 Sessões de Preenchimento com Ácido Hilaurônico<br>
+          <span class="bullet-point">•</span> 2 Sessões de Bioestimuladores de Colágeno</p>
         <h5><span class="highlight">Seja assinante e pague com 50% OFF</span></h5>
         <a href="#" class="btn btn-primary-custom">Assinar Pacote</a>
       </div>
@@ -103,12 +103,13 @@
   </div>
 </section>
 
+
 <!-- SESSÃO 3: Pacote Corpo Ideal -->
 <section id="club2" class="d-flex align-items-center">
   <div class="container">
     <div class="row align-items-center">
       <div class="col-md-6">
-        <img src="src/imagens/forAll - Pacote Corpo Perfeito.webp" class="img-fluid rounded img-slide" alt="Pacote Corpo Perfeito">
+        <img src="src/imagens/forAll - Pacote Corpo Perfeito.webp" class="img-fluid rounded img-slide img-fade-in" alt="Pacote Corpo Perfeito">
       </div>
       <div class="col-md-6">
         <h3><span class="highlight">Pacote Corpo Ideal:</span></h3>
@@ -127,7 +128,7 @@
   <div class="container">
     <div class="row align-items-center">
       <div class="col-md-6">
-        <img src="src/imagens/forAll - Pacote Pele Radiante.webp" class="img-fluid rounded img-slide" alt="Pacote Pele Radiante">
+        <img src="src/imagens/forAll - Pacote Pele Radiante.webp" class="img-fluid rounded img-slide img-fade-in" alt="Pacote Pele Radiante">
       </div>
       <div class="col-md-6">
         <h3><span class="highlight">Pacote Pele Radiante:</span></h3>
@@ -371,6 +372,27 @@ document.getElementById('phone').addEventListener('input', function(event) {
     }
 });
 
+    </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const images = document.querySelectorAll('.img-fade-in');
+      
+      // Função para adicionar a classe "show" às imagens quando entram na tela
+      const showImages = () => {
+        images.forEach((img) => {
+          const rect = img.getBoundingClientRect();
+          if (rect.top < window.innerHeight && rect.bottom > 0) {
+            img.classList.add('show');
+          }
+        });
+      };
+    
+      // Mostrar imagens quando a página carregar
+      showImages();
+    
+      // Mostrar imagens ao rolar a página
+      window.addEventListener('scroll', showImages);
+    });
     </script>
     
   </body>

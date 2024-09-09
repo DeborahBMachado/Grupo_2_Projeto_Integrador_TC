@@ -72,9 +72,9 @@
   <!-- Conteúdo da página individual -->
   <main class="container">
     <!-- O conteúdo da main será gerado dinamicamente -->
-    <div class="main-content" id="main-content"></div>
+    <div class="main-content fade-in" id="main-content"></div>
     <!-- Barra lateral com as miniaturas -->
-    <aside class="sidebar" id="sidebar"></aside>
+    <aside class="sidebar fade-in" id="sidebar"></aside>
   </main>
 
 <!-- Modal para Agendamento -->
@@ -107,7 +107,7 @@
 </div>
 <!-- Seção de Profissionais =========================================================================================================-->
 <section id="team" class="py-5 bg-light">
-  <div class="container">
+  <div class="container fade-in">
     <h2 class="text-center mb-4">Nossa Equipe</h2>
     <div id="teamCarousel" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
@@ -274,6 +274,28 @@ document.getElementById('contactModal').addEventListener('hidden.bs.modal', () =
       </div>
     </div>
   </footer>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const fadeElements = document.querySelectorAll('.fade-in');
+        
+        // Função para adicionar a classe "visible" aos elementos quando entram na tela
+        const showElements = () => {
+            fadeElements.forEach((el) => {
+                const rect = el.getBoundingClientRect();
+                if (rect.top < window.innerHeight && rect.bottom > 0) {
+                    el.classList.add('visible');
+                }
+            });
+        };
+
+        // Mostrar os elementos com a classe fade-in quando a página carregar
+        showElements();
+
+        // Mostrar os elementos ao rolar a página
+        window.addEventListener('scroll', showElements);
+    });
+</script>
+
 </body>
 
 </html>

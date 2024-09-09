@@ -1,9 +1,39 @@
+/* Ajuste para o navbar-toggler */
+.navbar-toggler {
+    display: none;
+}
+
+@media (max-width: 991.98px) {
+    .navbar-toggler {
+        display: block;
+    }
+
+    .navbar-collapse {
+        display: none;
+    }
+
+    .navbar-collapse.show {
+        display: block !important;
+    }
+}
+
+@media (min-width: 992px) {
+    .navbar-toggler {
+        display: none;
+    }
+
+    .navbar-collapse {
+        display: flex !important; /* Exibir o menu completo em telas maiores */
+    }
+}
+
 /* Estilos para a Main Content e Sidebar */
 main {
     display: flex;
     justify-content: space-between;
     margin-bottom: 50px;
-    margin-top: 100px;
+    margin-top: 10px;
+    padding-top: 110px;
 }
 
 .main-content {
@@ -55,7 +85,7 @@ main {
 }
 
 .post-sidebar img {
-    width: 70px; /* Tamanho ajustado das miniaturas */
+    width: 70px;
     height: 70px;
     object-fit: cover;
     border-radius: 10px;
@@ -63,9 +93,20 @@ main {
 }
 
 .post-sidebar h2 {
-    font-size: 1rem; /* Ajusta o tamanho do texto */
+    font-size: 1rem;
     color: #333;
-    margin: 0; /* Remove margens adicionais */
+    margin: 0;
+}
+/* Animação de fade-in */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* Ajustes para responsividade */
@@ -89,11 +130,11 @@ main {
     }
 
     .post-sidebar img {
-        width: 60px; /* Tamanho menor para telas menores */
+        width: 60px;
         height: 60px;
     }
 
     .post-sidebar h2 {
-        font-size: 0.9rem; /* Fonte menor em dispositivos móveis */
+        font-size: 0.9rem;
     }
 }
